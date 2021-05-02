@@ -1,6 +1,6 @@
 #include <iostream>;
 
-//сортировка выборм
+//СЃРѕСЂС‚РёСЂРѕРІРєР° РІС‹Р±РѕСЂРѕРј
 int selection_sort(int* a, int n) {
     int max_elem = a[0];
     for (int i = 1; i < n; ++i) {
@@ -18,7 +18,7 @@ int selection_sort(int* a, int n) {
     }
 }
 
-//быстраЯ сортировка
+//Р±С‹СЃС‚СЂР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°
 void quick_sort(int* a, int n) {
     if (n <= 1) {
         return;
@@ -48,17 +48,17 @@ void quick_sort(int* a, int n) {
             break;
         }
     }
-    // left pointer будет указывать на первый, > p , если такой есть, иначе - на конец массива
+    // left pointer Р±СѓРґРµС‚ СѓРєР°Р·С‹РІР°С‚СЊ РЅР° РїРµСЂРІС‹Р№, > p ,РµСЃР»Рё С‚Р°РєРѕР№ РµСЃС‚СЊ, РёРЅР°С‡Рµ - РЅР° РєРѕРЅРµС† РјР°СЃСЃРёРІР°
     if (left_pointer == n) {
         int t = a[left_pointer - 1];
         a[left_pointer - 1] = a[new_p_place];
         a[new_p_place] = t;
-        //ставим p в конец
+        //СЃС‚Р°РІРёРј p РІ РєРѕРЅРµС†
         quick_sort(a, n - 1);
         return;
     }
     --left_pointer;
-    // на посл указывает p
+    // РЅР° РїРѕСЃР» СѓРєР°Р·С‹РІР°РµС‚ p
     int t = a[left_pointer];
     a[left_pointer] = a[new_p_place];
     a[new_p_place] = t;
