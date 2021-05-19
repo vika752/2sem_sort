@@ -1,4 +1,4 @@
-#include <iostream>;
+#include <iostream>
 
 //сортировка выбором
 int selection_sort(int* a, int n) {
